@@ -188,15 +188,15 @@
 <form id="contact-form" class="grid grid-cols-1 gap-6">
 <div>
 <label class="block text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Full Name</label>
-<input class="w-full bg-slate-800/50 border-slate-700 rounded-lg p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-slate-100" placeholder="John Doe" required type="text"/>
+<input name="name" class="w-full bg-slate-800/50 border-slate-700 rounded-lg p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-slate-100" placeholder="John Doe" required type="text"/>
 </div>
 <div>
 <label class="block text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Business Email</label>
-<input class="w-full bg-slate-800/50 border-slate-700 rounded-lg p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-slate-100" placeholder="john@company.com" required type="email"/>
+<input name="email" class="w-full bg-slate-800/50 border-slate-700 rounded-lg p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-slate-100" placeholder="john@company.com" required type="email"/>
 </div>
 <div>
 <label class="block text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Project Vision</label>
-<textarea class="w-full bg-slate-800/50 border-slate-700 rounded-lg p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-slate-100" placeholder="Describe your software needs..." required rows="4"></textarea>
+<textarea name="message" class="w-full bg-slate-800/50 border-slate-700 rounded-lg p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-slate-100" placeholder="Describe your software needs..." required rows="4"></textarea>
 </div>
 <button class="w-full bg-primary text-background-dark h-14 font-bold rounded-lg hover:shadow-[0_0_20px_rgba(17,212,131,0.3)] transition-all uppercase tracking-widest">
                                     Initiate Blueprint
@@ -247,22 +247,46 @@
 
         const formContainer = document.getElementById('form-container');
         const successMessage = document.getElementById('success-message');
-        
-        // Simple transition effect
-        formContainer.style.opacity = '0';
-        setTimeout(() => {
-            formContainer.classList.add('hidden');
-            successMessage.classList.remove('hidden');
-            successMessage.classList.add('flex');
-            // Trigger a small entrance animation
-            successMessage.style.opacity = '0';
-            successMessage.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-                successMessage.style.transition = 'all 0.5s ease-out';
-                successMessage.style.opacity = '1';
-                successMessage.style.transform = 'translateY(0)';
-            }, 50);
-        }, 300);
+        const submitBtn = this.querySelector('button');
+        const originalBtnText = submitBtn.innerText;
+
+        // Visual feedback during submission
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'SENDING...';
+
+        fetch('https://formspree.io/f/xvgzvnvq', {
+            method: 'POST',
+            body: new FormData(this),
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                // Simple transition effect
+                formContainer.style.opacity = '0';
+                setTimeout(() => {
+                    formContainer.classList.add('hidden');
+                    successMessage.classList.remove('hidden');
+                    successMessage.classList.add('flex');
+                    // Trigger a small entrance animation
+                    successMessage.style.opacity = '0';
+                    successMessage.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        successMessage.style.transition = 'all 0.5s ease-out';
+                        successMessage.style.opacity = '1';
+                        successMessage.style.transform = 'translateY(0)';
+                    }, 50);
+                }, 300);
+            } else {
+                alert('Submission failed. Please try again or contact us directly at solutions@punctual.pt');
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalBtnText;
+            }
+        }).catch(error => {
+            alert('An error occurred. Please try again later.');
+            submitBtn.disabled = false;
+            submitBtn.innerText = originalBtnText;
+        });
     });
 </script>
 </body></html>

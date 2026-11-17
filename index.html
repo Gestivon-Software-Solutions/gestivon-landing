@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 
-<html class="dark scroll-smooth" lang="en">
+<html class="scroll-smooth" lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Gestivon | Software Architecture & SaaS Solutions</title>
-    <meta content="Gestivon | Software Architecture & SaaS Solutions" name="title" />
+    <title>Gestivon | Software Architecture &amp; SaaS Solutions</title>
+    <meta content="Gestivon | Software Architecture &amp; SaaS Solutions" name="title" />
     <meta
-        content="Architecting high-performance SaaS systems and software solutions for global scale. Based on gestivon.com."
+        content="Architecting high-performance SaaS systems and software solutions for global scale."
         name="description" />
     <link href="https://raw.githubusercontent.com/Gestivon-Software-Solutions/gestivon-landing/refs/heads/main/logo.png"
         rel="icon" type="image/png" />
@@ -16,37 +16,31 @@
     <!-- Open Graph / Facebook -->
     <meta content="website" property="og:type" />
     <meta content="https://gestivon.com" property="og:url" />
-    <meta content="Gestivon | Software Architecture & SaaS Solutions" property="og:title" />
+    <meta content="Gestivon | Software Architecture &amp; SaaS Solutions" property="og:title" />
     <meta content="Architecting high-performance SaaS systems and software solutions for global scale."
         property="og:description" />
     <!-- Twitter -->
     <meta content="summary_large_image" property="twitter:card" />
     <meta content="https://gestivon.com" property="twitter:url" />
-    <meta content="Gestivon | Software Architecture & SaaS Solutions" property="twitter:title" />
+    <meta content="Gestivon | Software Architecture &amp; SaaS Solutions" property="twitter:title" />
     <meta content="Architecting high-performance SaaS systems and software solutions for global scale."
         property="twitter:description" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
         rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#11d483",
-                        "background-light": "#f6f8f7",
-                        "background-dark": "#10221a",
+                        "primary": "#047857",
+                        "primary-accent": "#11d483",
+                        "surface-canvas": "#f8faf9",
+                        "ink": "#091510",
                     },
                     fontFamily: {
                         "display": ["Space Grotesk", "sans-serif"]
                     },
-                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
                 },
             },
         }
@@ -57,273 +51,512 @@
         }
 
         .grid-pattern {
-            background-image: radial-gradient(circle at 1px 1px, rgba(17, 212, 131, 0.05) 1px, transparent 0);
+            background-image: radial-gradient(circle at 1px 1px, rgba(9, 21, 16, 0.055) 1px, transparent 0);
             background-size: 40px 40px;
         }
     </style>
 </head>
 
 <body
-    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-background-dark overflow-x-hidden">
+    class="bg-[#f8faf9] text-slate-900 selection:bg-primary selection:text-white overflow-x-hidden antialiased">
     <div class="relative flex min-h-screen w-full flex-col grid-pattern">
         <!-- Navigation -->
-        <header
-            class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4">
-            <div class="max-w-7xl mx-auto flex items-center justify-between">
-                <div class="flex items-center gap-3">
+        <header class="sticky top-4 z-50 px-4 sm:px-6">
+            <div
+                class="max-w-7xl mx-auto h-16 px-5 sm:px-6 rounded-full bg-white/85 backdrop-blur-xl border border-slate-200/90 shadow-[0_8px_30px_rgb(15,23,42,0.06),inset_0_1px_0_rgba(255,255,255,1)] flex items-center justify-between gap-4">
+                <a href="#"
+                    class="flex items-center gap-3 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white shrink-0">
                     <img src="https://raw.githubusercontent.com/Gestivon-Software-Solutions/gestivon-landing/refs/heads/main/logo.png"
-                        alt="Gestivon Logo" class="h-8 w-auto">
-                    <h2 class="text-xl font-bold tracking-tight text-slate-100">Gestivon</h2>
-                </div>
-                <nav class="hidden md:flex items-center gap-10">
-                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#solutions">Solutions</a>
-                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#case-study">Case
-                        Studies</a>
-                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a>
+                        alt="Gestivon Logo" class="h-8 w-auto rounded-lg ring-1 ring-slate-900/10">
+                    <span class="text-lg font-bold tracking-tight text-slate-950">Gestivon</span>
+                </a>
+                <nav aria-label="Primary" class="hidden md:flex items-center gap-8 lg:gap-10">
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-sm"
+                        href="#solutions">Solutions</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-sm"
+                        href="#platform">Platform</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-sm"
+                        href="#case-study">Case Studies</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-sm"
+                        href="#contact">Contact</a>
                 </nav>
-
+                <a href="#contact"
+                    class="px-4 py-2 rounded-full bg-[#091510] text-white text-xs font-bold tracking-wide hover:bg-slate-800 active:scale-[0.98] transition-all motion-reduce:transition-none motion-reduce:transform-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white whitespace-nowrap shrink-0">Initiate
+                    Blueprint</a>
             </div>
         </header>
         <main class="flex-1">
             <!-- Hero Section -->
-            <section class="px-6 lg:px-20 py-20 lg:py-32">
-                <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-                    <div class="flex flex-col gap-8">
-                        <div
-                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit">
-                            <span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
-                            <span class="text-xs font-bold uppercase tracking-widest text-primary">NOW WORKING ON
-                                PUNCTUAL</span>
-                        </div>
-                        <h1 class="text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
-                            Architecting <span
-                                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400">SaaS
-                                Systems</span> for Global Scale
+            <section class="px-6 lg:px-20 pt-12 pb-20 lg:pt-20 lg:pb-28">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div class="flex flex-col gap-7 min-w-0">
+                        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.06] tracking-[-0.03em] text-slate-950">
+                            Architecting <span class="text-primary">SaaS Systems</span>
+                            <span class="text-slate-500 font-normal">for Global Scale</span>
                         </h1>
-                        <p class="text-lg lg:text-xl text-slate-400 max-w-xl leading-relaxed">
+                        <p class="text-lg lg:text-xl text-slate-600 max-w-xl leading-relaxed">
                             We build high-impact software tailored for any operating area of your business. Modern,
                             scalable, and built with architectural precision.
                         </p>
-                        <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex flex-wrap items-center gap-4 pt-1">
+                            <a href="#contact"
+                                class="inline-flex items-center gap-3 pl-6 pr-2 py-2 rounded-full bg-[#091510] text-white text-sm font-bold tracking-wide hover:bg-slate-800 active:scale-[0.98] transition-all motion-reduce:transition-none motion-reduce:transform-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-[#f8faf9] group">
+                                <span>Initiate Blueprint</span>
+                                <span
+                                    class="w-8 h-8 rounded-full bg-[#11d483] text-[#091510] flex items-center justify-center transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none motion-reduce:transform-none"
+                                    aria-hidden="true">
+                                    <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" />
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="#case-study"
+                                class="inline-flex items-center px-6 py-3 rounded-full bg-white border border-slate-200/90 text-slate-700 text-sm font-medium hover:bg-slate-50 hover:border-slate-300 shadow-sm transition-all motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-[#f8faf9]">
+                                Selected Architecture
+                            </a>
                         </div>
                     </div>
-                    <div class="relative">
+                    <div class="relative min-w-0">
                         <div
-                            class="absolute -inset-1 bg-gradient-to-r from-primary/30 to-emerald-500/30 blur-2xl opacity-20">
-                        </div>
-                        <div class="relative bg-slate-900/50 border border-slate-800 p-2 rounded-xl">
-                            <div class="w-full aspect-square lg:aspect-video bg-cover bg-center rounded-lg"
-                                data-alt="Abstract architectural wireframe 3D rendering"
-                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBqxO-P-v_NfVKmOKCyErhFDyednUIcLzeURPVVx0KatjGHPNWe_qZ8vAxEvgxZ1TOrTqXjNr3V6T6DTP-FezilD4IJ5X6zrdEpjym7G5Usrwm9kLJ6dYbtuwFNHZv68R_GLSflg2J7sk-3CY_V5Q_RcReCT0xz7b_xVErjdBwDvPcG_kHONRM5Q0OOzw5yJkee1CopzrK9xf3z7aE2Cby1m55KxZbe5Q363Aj17P-mmlqVG7_KdHJMXqBdoYkpFvR_Y1Nh5eHX_Y');">
+                            class="p-2 rounded-[1.5rem] bg-slate-900/[0.03] ring-1 ring-slate-900/[0.08] shadow-[0_24px_60px_-16px_rgba(15,23,42,0.1)]">
+                            <div
+                                class="rounded-[calc(1.5rem-0.5rem)] overflow-hidden border border-slate-200/90 bg-white">
+                                <div
+                                    class="px-4 py-2.5 border-b border-slate-200/80 bg-slate-50/90 flex items-center justify-between gap-2 text-[11px] font-mono text-slate-500">
+                                    <span class="truncate">punctual.pt — production cluster</span>
+                                    <span class="inline-flex items-center gap-1.5 text-slate-700 shrink-0">
+                                        <span class="h-1.5 w-1.5 rounded-full bg-[#11d483]" aria-hidden="true"></span>
+                                        99.98% uptime
+                                    </span>
+                                </div>
+                                <div class="overflow-hidden bg-slate-100">
+                                    <img src="app-dashboard.png"
+                                        onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/Gestivon-Software-Solutions/gestivon-landing/refs/heads/main/app-dashboard.png'"
+                                        alt="Punctual.pt Production Cluster Dashboard"
+                                        width="1760"
+                                        height="1190"
+                                        decoding="async"
+                                        fetchpriority="high"
+                                        class="w-full aspect-video object-cover object-top" />
+                                </div>
+                                <div
+                                    class="px-4 py-3 border-t border-slate-200/80 bg-slate-50/90 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500 font-mono">
+                                    <span>Multi-Tenant SaaS</span>
+                                    <span class="text-slate-300" aria-hidden="true">·</span>
+                                    <span>Edge SSR</span>
+                                    <span class="text-slate-300" aria-hidden="true">·</span>
+                                    <span>GDPR-Native</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- Core Focus: SaaS Development -->
-            <section class="px-6 lg:px-20 py-24 bg-primary/5 scroll-mt-24" id="solutions">
+            <section class="px-6 lg:px-20 py-24 border-t border-slate-200/80 scroll-mt-28" id="solutions">
                 <div class="max-w-7xl mx-auto">
-                    <div class="mb-16">
-                        <h2 class="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4">Core Competencies
-                        </h2>
-                        <h3 class="text-4xl lg:text-5xl font-bold mb-6">Tailored Software Ecosystems</h3>
-                        <p class="text-slate-400 max-w-2xl text-lg">Our architectural approach ensures that every line
-                            of code serves your business goals, regardless of the domain.</p>
+                    <div class="mb-14">
+                        <h2 class="text-3xl lg:text-5xl font-bold tracking-[-0.02em] mb-4 text-slate-950">Tailored
+                            Software Ecosystems</h2>
+                        <p class="text-slate-600 max-w-2xl text-lg leading-relaxed">Our architectural approach ensures
+                            every system serves measurable business operations across domains.</p>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
                         <div
-                            class="p-8 bg-background-dark border border-slate-800 hover:border-primary/50 transition-all group flex flex-col gap-6">
-                            <span
-                                class="material-symbols-outlined text-primary text-4xl group-hover:scale-110 transition-transform">layers</span>
-                            <div class="space-y-3">
-                                <h4 class="text-xl font-bold">Scalable Architecture</h4>
-                                <p class="text-slate-400 leading-relaxed">Engineered to grow seamlessly from 100 to 100M
-                                    users without performance degradation.</p>
+                            class="lg:col-span-7 p-1.5 rounded-[1.5rem] bg-slate-900/[0.03] ring-1 ring-slate-900/[0.08] shadow-[0_12px_36px_-12px_rgba(15,23,42,0.06)]">
+                            <div
+                                class="h-full rounded-[calc(1.5rem-0.375rem)] bg-white border border-slate-200/80 p-8 flex flex-col justify-between gap-8 shadow-[inset_0_1px_0_rgba(255,255,255,1)]">
+                                <div>
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-600/20 flex items-center justify-center text-primary">
+                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                            aria-hidden="true">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                            <path d="M2 17l10 5 10-5" />
+                                            <path d="M2 12l10 5 10-5" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-slate-950 mt-5 mb-3">Multi-Tenant SaaS Architecture
+                                    </h3>
+                                    <p class="text-slate-600 leading-relaxed">Engineered for distributed tenant
+                                        isolation, automated scheduling and billing pipelines, and zero-downtime
+                                        releases across high-throughput production clusters.</p>
+                                </div>
+                                <dl class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-slate-200/80">
+                                    <div>
+                                        <dt class="text-xs font-mono uppercase tracking-wider text-slate-500">Tenant
+                                            Isolation</dt>
+                                        <dd class="text-lg font-bold text-slate-950 mt-1">Row-Level Auth</dd>
+                                    </div>
+                                    <div>
+                                        <dt class="text-xs font-mono uppercase tracking-wider text-slate-500">
+                                            Zero-Downtime CI/CD</dt>
+                                        <dd class="text-lg font-bold text-slate-950 mt-1">Atomic Deploys</dd>
+                                    </div>
+                                    <div>
+                                        <dt class="text-xs font-mono uppercase tracking-wider text-slate-500">
+                                            Event-Driven Webhooks</dt>
+                                        <dd class="text-lg font-bold text-slate-950 mt-1">Idempotent Sync</dd>
+                                    </div>
+                                </dl>
                             </div>
                         </div>
                         <div
-                            class="p-8 bg-background-dark border border-slate-800 hover:border-primary/50 transition-all group flex flex-col gap-6">
-                            <span
-                                class="material-symbols-outlined text-primary text-4xl group-hover:scale-110 transition-transform">bolt</span>
-                            <div class="space-y-3">
-                                <h4 class="text-xl font-bold">Operational Efficiency</h4>
-                                <p class="text-slate-400 leading-relaxed">Streamlining workflows across departments with
-                                    automated, domain-specific logic.</p>
+                            class="lg:col-span-5 p-1.5 rounded-[1.5rem] bg-slate-900/[0.03] ring-1 ring-slate-900/[0.08] shadow-[0_12px_36px_-12px_rgba(15,23,42,0.06)]">
+                            <div
+                                class="h-full rounded-[calc(1.5rem-0.375rem)] bg-white border border-slate-200/80 p-8 flex flex-col justify-between gap-8 shadow-[inset_0_1px_0_rgba(255,255,255,1)]">
+                                <div>
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-600/20 flex items-center justify-center text-primary">
+                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                            aria-hidden="true">
+                                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-slate-950 mt-5 mb-3">Domain Workflow Automation</h3>
+                                    <p class="text-slate-600 leading-relaxed">Custom back-office orchestration linking
+                                        Stripe inventory and coupon synchronization with autonomous 24/7 booking
+                                        reception.</p>
+                                </div>
+                                <ul class="space-y-3 text-sm text-slate-700">
+                                    <li class="border-l-2 border-primary/50 pl-3.5 py-0.5">Stripe Checkout &amp;
+                                        Inventory Sync</li>
+                                    <li class="border-l-2 border-primary/50 pl-3.5 py-0.5">Autonomous 24/7 Booking
+                                        Reception</li>
+                                    <li class="border-l-2 border-primary/50 pl-3.5 py-0.5">Custom Operational Pipelines
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div
-                            class="p-8 bg-background-dark border border-slate-800 hover:border-primary/50 transition-all group flex flex-col gap-6">
-                            <span
-                                class="material-symbols-outlined text-primary text-4xl group-hover:scale-110 transition-transform">devices</span>
-                            <div class="space-y-3">
-                                <h4 class="text-xl font-bold">Multi-Platform Reach</h4>
-                                <p class="text-slate-400 leading-relaxed">Native-feel performance across web, desktop,
-                                    and mobile operating environments.</p>
+                            class="lg:col-span-12 p-1.5 rounded-[1.5rem] bg-slate-900/[0.03] ring-1 ring-slate-900/[0.08] shadow-[0_12px_36px_-12px_rgba(15,23,42,0.06)]">
+                            <div
+                                class="rounded-[calc(1.5rem-0.375rem)] bg-white border border-slate-200/80 p-8 shadow-[inset_0_1px_0_rgba(255,255,255,1)]">
+                                <h3 class="text-xl font-bold text-slate-950 mb-6">Production Engineering Standards</h3>
+                                <div
+                                    class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 md:divide-x divide-slate-200/80">
+                                    <div class="md:pr-8">
+                                        <h4 class="text-sm font-bold text-primary uppercase tracking-wider mb-2">
+                                            Sub-Second Edge Delivery</h4>
+                                        <p class="text-sm text-slate-600 leading-relaxed">Static-first hydration, edge
+                                            caching, and strict Core Web Vitals performance budgets.</p>
+                                    </div>
+                                    <div class="md:px-8 pt-6 md:pt-0">
+                                        <h4 class="text-sm font-bold text-primary uppercase tracking-wider mb-2">GDPR
+                                            &amp; Zero-Trust Privacy</h4>
+                                        <p class="text-sm text-slate-600 leading-relaxed">Consent-first telemetry,
+                                            scoped data retention policies, and encrypted storage boundaries.</p>
+                                    </div>
+                                    <div class="md:pl-8 pt-6 md:pt-0">
+                                        <h4 class="text-sm font-bold text-primary uppercase tracking-wider mb-2">
+                                            Bilingual &amp; Geo-SEO Schema</h4>
+                                        <p class="text-sm text-slate-600 leading-relaxed">Localized routing, structured
+                                            JSON-LD entity graphs, and clean semantic HTML5.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- Case Studies -->
-            <section class="px-6 lg:px-20 py-32 overflow-hidden scroll-mt-24" id="case-study">
-                <div class="max-w-7xl mx-auto space-y-32">
-                    <!-- Case Study 1: Punctual.pt -->
-                    <div class="grid lg:grid-cols-2 gap-16 items-center">
-                        <div class="order-2 lg:order-1 relative">
-                            <div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
-                            <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl shadow-2xl overflow-hidden">
-                                <img src="https://raw.githubusercontent.com/Gestivon-Software-Solutions/gestivon-landing/refs/heads/main/app-dashboard.png"
-                                    alt="Punctual.pt Dashboard"
-                                    class="w-full aspect-video rounded-lg object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer">
+            <!-- Proprietary Platform: Punctual.pt -->
+            <section
+                class="px-6 lg:px-20 py-28 border-y border-slate-200/80 bg-gradient-to-b from-[#f8faf9] via-emerald-500/[0.04] to-[#f8faf9] overflow-hidden scroll-mt-28"
+                id="platform">
+                <div class="max-w-7xl mx-auto">
+                    <div class="mb-12">
+                        <h2 class="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-3">Proprietary SaaS
+                            Platform</h2>
+                        <h3 class="text-3xl lg:text-5xl font-bold tracking-[-0.02em] text-slate-950">Our Flagship
+                            Product</h3>
+                    </div>
+                    <div
+                        class="p-2 rounded-[2rem] bg-emerald-950/[0.03] ring-1 ring-emerald-600/25 shadow-[0_24px_70px_-16px_rgba(15,23,42,0.1)]">
+                        <div
+                            class="rounded-[calc(2rem-0.5rem)] bg-white border border-slate-200/90 p-6 sm:p-10 lg:p-14">
+                            <div
+                                class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-8 border-b border-slate-200/80">
+                                <div class="max-w-2xl space-y-4">
+                                    <h4 class="text-3xl sm:text-4xl xl:text-5xl font-bold tracking-tight text-slate-950">
+                                        Punctual.pt</h4>
+                                    <p class="text-lg text-slate-600 leading-relaxed">
+                                        Our proprietary management ecosystem engineered and operated by Gestivon for
+                                        service-oriented businesses. We transformed complex manual scheduling into a
+                                        seamless, automated SaaS platform handling thousands of daily client
+                                        interactions with zero friction.
+                                    </p>
+                                </div>
+                                <a class="inline-flex items-center gap-3 pl-6 pr-2 py-2.5 rounded-full bg-[#091510] text-white text-sm font-bold tracking-wide hover:bg-slate-800 active:scale-[0.98] transition-all motion-reduce:transition-none motion-reduce:transform-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-white group w-fit shrink-0"
+                                    href="https://punctual.pt" target="_blank" rel="noopener noreferrer">
+                                    <span>Explore Punctual Platform</span>
+                                    <span
+                                        class="w-8 h-8 rounded-full bg-[#11d483] text-[#091510] flex items-center justify-center transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none motion-reduce:transform-none"
+                                        aria-hidden="true">
+                                        <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" />
+                                        </svg>
+                                    </span>
+                                </a>
                             </div>
-                        </div>
-                        <div class="order-1 lg:order-2 flex flex-col gap-8">
-                            <div class="flex items-center gap-4">
-                                <span class="h-[1px] w-12 bg-primary"></span>
-                                <span class="text-primary font-bold text-sm tracking-widest uppercase">Success
-                                    Story</span>
-                            </div>
-                            <h2 class="text-4xl lg:text-6xl font-bold">Punctual.pt</h2>
-                            <p class="text-xl text-slate-400 leading-relaxed">
-                                A revolutionary management ecosystem for service-oriented businesses. We transformed
-                                complex manual scheduling into a seamless, automated operation that empowers businesses
-                                to handle thousands of daily client interactions with zero friction.
-                            </p>
-                            <ul class="space-y-4">
-                                <li class="flex items-center gap-3">
-                                    <span class="material-symbols-outlined text-primary">check_circle</span>
-                                    <span>24/7 Intelligent Booking Automation</span>
-                                </li>
-                                <li class="flex items-center gap-3">
-                                    <span class="material-symbols-outlined text-primary">check_circle</span>
-                                    <span>Privacy-First Secure Communications</span>
-                                </li>
-                                <li class="flex items-center gap-3">
-                                    <span class="material-symbols-outlined text-primary">check_circle</span>
-                                    <span>Scalable Operations for High-Volume Growth</span>
-                                </li>
-                            </ul>
-                            <a class="text-primary font-bold flex items-center gap-2 group hover:underline underline-offset-8 transition-all"
-                                href="https://punctual.pt" target="_blank">
-                                View Case Success
-                                <span
-                                    class="material-symbols-outlined group-hover:translate-x-2 transition-transform">trending_flat</span>
+
+                            <a href="https://punctual.pt" target="_blank" rel="noopener noreferrer"
+                                aria-label="Open Punctual.pt website in a new tab"
+                                class="block group/img relative overflow-hidden rounded-xl border border-slate-200/90 bg-slate-50 my-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-white">
+                                <div
+                                    class="px-4 py-2.5 border-b border-slate-200/80 bg-slate-100/80 flex items-center justify-between text-xs font-mono text-slate-500">
+                                    <span>punctual.pt</span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 text-slate-500 group-hover/img:text-primary transition-colors motion-reduce:transition-none">
+                                        <span>Live Platform</span>
+                                        <svg class="w-3.5 h-3.5 transition-transform group-hover/img:translate-x-0.5 group-hover/img:-translate-y-0.5 motion-reduce:transition-none motion-reduce:transform-none"
+                                            viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <img src="punctual-marketing.png"
+                                        onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/Gestivon-Software-Solutions/gestivon-landing/refs/heads/main/app-dashboard.png'"
+                                        alt="Punctual.pt Marketing Platform"
+                                        width="1440"
+                                        height="810"
+                                        loading="lazy"
+                                        decoding="async"
+                                        class="w-full aspect-video object-cover grayscale group-hover/img:grayscale-0 group-hover/img:scale-[1.01] transition-all duration-700 motion-reduce:transition-none motion-reduce:transform-none">
+                                </div>
                             </a>
+
+                            <div
+                                class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 md:divide-x divide-slate-200/80 pt-4">
+                                <div class="md:pr-8">
+                                    <h5 class="text-sm font-bold text-slate-950 mb-1.5">24/7 Intelligent Booking
+                                        Automation</h5>
+                                    <p class="text-sm text-slate-600 leading-relaxed">Autonomous scheduling, calendar
+                                        conflict resolution, and instant slot confirmation.</p>
+                                </div>
+                                <div class="md:px-8">
+                                    <h5 class="text-sm font-bold text-slate-950 mb-1.5">Privacy-First Secure
+                                        Communications</h5>
+                                    <p class="text-sm text-slate-600 leading-relaxed">Encrypted client messaging and
+                                        GDPR-compliant notification workflows.</p>
+                                </div>
+                                <div class="md:pl-8">
+                                    <h5 class="text-sm font-bold text-slate-950 mb-1.5">High-Volume Multi-Tenant Scale
+                                    </h5>
+                                    <p class="text-sm text-slate-600 leading-relaxed">Isolated tenant data boundaries
+                                        engineered for sustained peak throughput.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Case Study 2: Das Duas Uma -->
-                    <div class="grid lg:grid-cols-2 gap-16 items-center">
-                        <div class="order-1 flex flex-col gap-8">
-                            <div class="flex items-center gap-4">
-                                <span class="h-[1px] w-12 bg-primary"></span>
-                                <span class="text-primary font-bold text-sm tracking-widest uppercase">Success
-                                    Story</span>
+                </div>
+            </section>
+            <!-- Client Case Studies / Proof of Work -->
+            <section class="px-6 lg:px-20 py-28 overflow-hidden scroll-mt-28" id="case-study">
+                <div class="max-w-7xl mx-auto">
+                    <div class="mb-20">
+                        <h2 class="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-3">Proof of Work</h2>
+                        <h3 class="text-3xl lg:text-5xl font-bold tracking-[-0.02em] mb-4 text-slate-950">Client Digital
+                            Ecosystems</h3>
+                        <p class="text-slate-600 max-w-2xl text-lg leading-relaxed">Bespoke web platforms, e-commerce
+                            architectures, and high-converting digital experiences engineered for our partners.</p>
+                    </div>
+                    <div class="space-y-28">
+                        <!-- Case Study 1: Das Duas Uma -->
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                            <div class="order-1 flex flex-col gap-7 min-w-0">
+                                <span class="text-xs font-mono uppercase tracking-widest text-primary">E-Commerce ·
+                                    Stripe Sync · Sensory UX</span>
+                                <h4 class="text-3xl sm:text-4xl xl:text-6xl font-bold break-words tracking-tight text-slate-950">
+                                    dasduasuma.pt</h4>
+                                <p class="text-xl text-slate-600 leading-relaxed">
+                                    An elegant e-commerce platform and immersive landing page for the premium Portuguese
+                                    wine brand "Das Duas Uma". We developed a sophisticated sensory-focused digital
+                                    presence featuring a Stripe-integrated checkout, automated inventory/coupon sync,
+                                    and a gamified wine-tasting questionnaire.
+                                </p>
+                                <ul class="space-y-3">
+                                    <li class="border-l-2 border-primary/50 pl-4 py-0.5 text-slate-700">Automated
+                                        Stripe Coupon &amp; Inventory Synchronization</li>
+                                    <li class="border-l-2 border-primary/50 pl-4 py-0.5 text-slate-700">Gamified
+                                        Sensorial Experience &amp; Reward System</li>
+                                    <li class="border-l-2 border-primary/50 pl-4 py-0.5 text-slate-700">Rigorous,
+                                        Bilingual GDPR-Compliant Architecture</li>
+                                </ul>
+                                <a class="text-primary font-bold inline-flex items-center gap-2 py-2.5 group hover:underline underline-offset-8 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-[#f8faf9] rounded-sm w-fit"
+                                    href="https://dasduasuma.pt" target="_blank" rel="noopener noreferrer">
+                                    <span>View Live Project</span>
+                                    <svg class="w-4 h-4 transition-transform group-hover:translate-x-1.5 motion-reduce:transition-none motion-reduce:transform-none"
+                                        viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M3 8h10M9 4l4 4-4 4" />
+                                    </svg>
+                                </a>
                             </div>
-                            <h2 class="text-4xl lg:text-6xl font-bold">dasduasuma.pt</h2>
-                            <p class="text-xl text-slate-400 leading-relaxed">
-                                An elegant e-commerce platform and immersive landing page for the premium Portuguese
-                                wine brand "Das Duas Uma". We developed a sophisticated sensory-focused digital presence
-                                featuring a Stripe-integrated checkout, automated inventory/coupon sync, and a gamified
-                                wine-tasting questionnaire.
-                            </p>
-                            <ul class="space-y-4">
-                                <li class="flex items-center gap-3">
-                                    <span class="material-symbols-outlined text-primary">check_circle</span>
-                                    <span>Automated Stripe Coupon & Inventory Synchronization</span>
-                                </li>
-                                <li class="flex items-center gap-3">
-                                    <span class="material-symbols-outlined text-primary">check_circle</span>
-                                    <span>Gamified Sensorial Experience & Reward System</span>
-                                </li>
-                                <li class="flex items-center gap-3">
-                                    <span class="material-symbols-outlined text-primary">check_circle</span>
-                                    <span>Rigorous, Bilingual GDPR-Compliant Architecture</span>
-                                </li>
-                            </ul>
-                            <a class="text-primary font-bold flex items-center gap-2 group hover:underline underline-offset-8 transition-all"
-                                href="https://dasduasuma.pt" target="_blank">
-                                View Case Success
-                                <span
-                                    class="material-symbols-outlined group-hover:translate-x-2 transition-transform">trending_flat</span>
-                            </a>
+                            <div class="order-2 relative min-w-0">
+                                <div
+                                    class="p-2 rounded-[1.5rem] bg-slate-900/[0.03] ring-1 ring-slate-900/[0.08] shadow-[0_24px_60px_-16px_rgba(15,23,42,0.1)]">
+                                    <a href="https://dasduasuma.pt" target="_blank" rel="noopener noreferrer"
+                                        aria-label="Open dasduasuma.pt website in a new tab"
+                                        class="block group/img relative overflow-hidden rounded-[calc(1.5rem-0.5rem)] border border-slate-200/90 bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-[#f8faf9]">
+                                        <img src="das-duas-uma.png"
+                                            onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/Gestivon-Software-Solutions/gestivon-landing/refs/heads/main/das-duas-uma.png'"
+                                            alt="Das Duas Uma Wine Shop"
+                                            width="1865"
+                                            height="912"
+                                            loading="lazy"
+                                            decoding="async"
+                                            class="w-full aspect-video object-cover grayscale group-hover/img:grayscale-0 group-hover/img:scale-[1.01] transition-all duration-700 motion-reduce:transition-none motion-reduce:transform-none">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="order-2 relative">
-                            <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
-                            <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl shadow-2xl overflow-hidden">
-                                <img src="https://raw.githubusercontent.com/Gestivon-Software-Solutions/gestivon-landing/refs/heads/main/das-duas-uma.png"
-                                    alt="Das Duas Uma Wine Shop"
-                                    class="w-full aspect-video rounded-lg object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer">
+
+                        <!-- Case Study 2: Marco Fialho -->
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                            <div class="order-2 lg:order-1 relative min-w-0">
+                                <div
+                                    class="p-2 rounded-[1.5rem] bg-slate-900/[0.03] ring-1 ring-slate-900/[0.08] shadow-[0_24px_60px_-16px_rgba(15,23,42,0.1)]">
+                                    <a href="https://marcovfialho.com" target="_blank" rel="noopener noreferrer"
+                                        aria-label="Open marcovfialho.com website in a new tab"
+                                        class="block group/img relative overflow-hidden rounded-[calc(1.5rem-0.5rem)] border border-slate-200/90 bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-[#f8faf9]">
+                                        <img src="marco-fialho.png"
+                                            onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/Gestivon-Software-Solutions/gestivon-landing/refs/heads/main/marco-fialho.png'"
+                                            alt="Marco Fialho Training Academy Digital Platform"
+                                            width="1440"
+                                            height="810"
+                                            loading="lazy"
+                                            decoding="async"
+                                            class="w-full aspect-video object-cover grayscale group-hover/img:grayscale-0 group-hover/img:scale-[1.01] transition-all duration-700 motion-reduce:transition-none motion-reduce:transform-none">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="order-1 lg:order-2 flex flex-col gap-7 min-w-0">
+                                <span class="text-xs font-mono uppercase tracking-widest text-primary">Astro v6 · GSAP
+                                    Canvas · EdTech Platform</span>
+                                <h4 class="text-3xl sm:text-4xl xl:text-6xl font-bold break-words tracking-tight text-slate-950">
+                                    marcovfialho.com</h4>
+                                <p class="text-xl text-slate-600 leading-relaxed">
+                                    An industrial-brutalist, bilingual digital platform engineered for Marco Fialho's
+                                    renowned Men's Hairdressing &amp; Barbering Academy. Built on Astro v6 with GSAP
+                                    scroll-driven choreography and a 259-frame interactive HTML5 canvas sequence, the
+                                    architecture pairs kinetic visual storytelling with an interactive masterclass
+                                    catalog and high-speed WebP portfolio.
+                                </p>
+                                <ul class="space-y-3">
+                                    <li class="border-l-2 border-primary/50 pl-4 py-0.5 text-slate-700">259-Frame
+                                        Interactive HTML5 Canvas Sequence</li>
+                                    <li class="border-l-2 border-primary/50 pl-4 py-0.5 text-slate-700">Astro v6 &amp;
+                                        GSAP Scroll-Triggered Architecture</li>
+                                    <li class="border-l-2 border-primary/50 pl-4 py-0.5 text-slate-700">Bilingual
+                                        Course Catalog &amp; Geo JSON-LD SEO</li>
+                                </ul>
+                                <a class="text-primary font-bold inline-flex items-center gap-2 py-2.5 group hover:underline underline-offset-8 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-[#f8faf9] rounded-sm w-fit"
+                                    href="https://marcovfialho.com" target="_blank" rel="noopener noreferrer">
+                                    <span>View Live Project</span>
+                                    <svg class="w-4 h-4 transition-transform group-hover:translate-x-1.5 motion-reduce:transition-none motion-reduce:transform-none"
+                                        viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M3 8h10M9 4l4 4-4 4" />
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- Contact Section -->
-            <section class="px-6 lg:px-20 py-24 border-t border-slate-800 scroll-mt-24" id="contact">
+            <section class="px-6 lg:px-20 py-24 border-t border-slate-200/80 scroll-mt-28" id="contact">
                 <div class="max-w-7xl mx-auto">
                     <div
-                        class="bg-gradient-to-br from-background-dark to-slate-900 border border-primary/20 p-8 lg:p-16 rounded-xl flex flex-col lg:flex-row gap-16">
-                        <div class="lg:w-1/2 space-y-8">
-                            <h2 class="text-4xl lg:text-5xl font-bold">Ready to <br /><span
-                                    class="text-primary">Architect Your Future?</span></h2>
-                            <p class="text-slate-400 text-lg">Let's discuss how we can build a software solution that
-                                propels your business to the next level of operational excellence.</p>
-                            <div class="space-y-4">
-                                <div class="flex items-center gap-4">
-                                    <div class="size-10 rounded bg-primary/10 flex items-center justify-center">
-                                        <span class="material-symbols-outlined text-primary">mail</span>
+                        class="p-2 rounded-[2rem] bg-slate-900/[0.03] ring-1 ring-slate-900/[0.08] shadow-[0_24px_60px_-16px_rgba(15,23,42,0.1)]">
+                        <div
+                            class="rounded-[calc(2rem-0.5rem)] bg-white border border-slate-200/90 p-8 lg:p-16 flex flex-col lg:flex-row gap-12 lg:gap-16">
+                            <div class="lg:w-1/2 space-y-8 min-w-0">
+                                <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-slate-950">Ready to <br /><span
+                                        class="text-primary">Architect Your Future?</span></h2>
+                                <p class="text-slate-600 text-lg leading-relaxed">Let's discuss how we can build a
+                                    software solution that propels your business to the next level of operational
+                                    excellence.</p>
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="size-10 rounded-lg bg-emerald-500/10 border border-emerald-600/20 flex items-center justify-center text-primary shrink-0">
+                                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                aria-hidden="true">
+                                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                                <path d="M22 7l-10 6L2 7" />
+                                            </svg>
+                                        </div>
+                                        <a href="mailto:partners@gestivon.com"
+                                            class="text-slate-800 hover:text-primary font-medium transition-colors break-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-white rounded-sm">partners@gestivon.com</a>
                                     </div>
-                                    <span class="text-slate-200">solutions@punctual.pt</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="lg:w-1/2">
-                            <div id="form-container">
-                                <form id="contact-form" class="grid grid-cols-1 gap-6">
-                                    <div>
-                                        <label
-                                            class="block text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Full
-                                            Name</label>
-                                        <input name="name"
-                                            class="w-full bg-slate-800/50 border-slate-700 rounded-lg p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-slate-100"
-                                            placeholder="John Doe" required type="text" />
-                                    </div>
-                                    <div>
-                                        <label
-                                            class="block text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Business
-                                            Email</label>
-                                        <input name="email"
-                                            class="w-full bg-slate-800/50 border-slate-700 rounded-lg p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-slate-100"
-                                            placeholder="john@company.com" required type="email" />
-                                    </div>
-                                    <div>
-                                        <label
-                                            class="block text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Project
-                                            Vision</label>
-                                        <textarea name="message"
-                                            class="w-full bg-slate-800/50 border-slate-700 rounded-lg p-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-slate-100"
-                                            placeholder="Describe your software needs..." required rows="4"></textarea>
-                                    </div>
-                                    <button
-                                        class="w-full bg-primary text-background-dark h-14 font-bold rounded-lg hover:shadow-[0_0_20px_rgba(17,212,131,0.3)] transition-all uppercase tracking-widest">
-                                        Initiate Blueprint
-                                    </button>
-                                </form>
-                            </div>
-                            <div id="success-message"
-                                class="hidden flex-col items-center justify-center text-center space-y-6 py-12">
-                                <div
-                                    class="size-20 bg-primary/20 rounded-full flex items-center justify-center animate-bounce">
-                                    <span class="material-symbols-outlined text-primary text-5xl">check_circle</span>
+                            <div class="lg:w-1/2 min-w-0">
+                                <div id="form-container">
+                                    <form id="contact-form" class="grid grid-cols-1 gap-6">
+                                        <div>
+                                            <label for="contact-name"
+                                                class="block text-sm font-bold text-slate-700 uppercase tracking-wider mb-2">Full
+                                                Name</label>
+                                            <input id="contact-name" name="name"
+                                                class="w-full bg-slate-50 border border-slate-200 rounded-lg p-4 focus:bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-slate-900 placeholder:text-slate-500"
+                                                placeholder="Alexandre Soares" required type="text"
+                                                autocomplete="name" />
+                                        </div>
+                                        <div>
+                                            <label for="contact-email"
+                                                class="block text-sm font-bold text-slate-700 uppercase tracking-wider mb-2">Business
+                                                Email</label>
+                                            <input id="contact-email" name="email"
+                                                class="w-full bg-slate-50 border border-slate-200 rounded-lg p-4 focus:bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-slate-900 placeholder:text-slate-500"
+                                                placeholder="alexandre@company.pt" required type="email"
+                                                autocomplete="email" />
+                                        </div>
+                                        <div>
+                                            <label for="contact-message"
+                                                class="block text-sm font-bold text-slate-700 uppercase tracking-wider mb-2">Project
+                                                Vision</label>
+                                            <textarea id="contact-message" name="message"
+                                                class="w-full bg-slate-50 border border-slate-200 rounded-lg p-4 focus:bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-slate-900 placeholder:text-slate-500"
+                                                placeholder="Describe your software needs..." required
+                                                rows="4"></textarea>
+                                        </div>
+                                        <p id="form-error" role="alert"
+                                            class="hidden text-sm text-rose-700 bg-rose-50 border border-rose-200 rounded-lg px-4 py-3">
+                                        </p>
+                                        <button type="submit"
+                                            class="w-full bg-[#091510] text-white h-14 font-bold rounded-full hover:bg-slate-800 active:scale-[0.99] transition-all motion-reduce:transition-none motion-reduce:transform-none uppercase tracking-widest focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-white">
+                                            Initiate Blueprint
+                                        </button>
+                                    </form>
                                 </div>
-                                <div class="space-y-2">
-                                    <h3 class="text-3xl font-bold">Blueprint Initiated</h3>
-                                    <p class="text-slate-400">Our architects have received your vision. We'll be in
-                                        touch within 24 hours.</p>
+                                <div id="success-message"
+                                    class="hidden flex-col items-center justify-center text-center space-y-6 py-12">
+                                    <div
+                                        class="size-20 bg-emerald-500/10 ring-1 ring-emerald-600/25 rounded-full flex items-center justify-center text-primary">
+                                        <svg class="w-9 h-9" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                            aria-hidden="true">
+                                            <path d="M20 6L9 17l-5-5" />
+                                        </svg>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <h3 class="text-3xl font-bold text-slate-950">Blueprint Initiated</h3>
+                                        <p class="text-slate-600">Our architects have received your vision. We'll be in
+                                            touch within 24 hours.</p>
+                                    </div>
+                                    <button id="reset-form-btn" type="button"
+                                        class="text-primary font-bold py-2 px-4 hover:underline underline-offset-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-white rounded-sm">Send
+                                        another message</button>
                                 </div>
-                                <button onclick="location.reload()" class="text-primary font-bold hover:underline">Send
-                                    another message</button>
                             </div>
                         </div>
                     </div>
@@ -331,78 +564,111 @@
             </section>
         </main>
         <!-- Footer -->
-        <footer class="px-6 lg:px-20 py-12 border-t border-slate-800 bg-background-dark">
+        <footer class="px-6 lg:px-20 py-12 border-t border-slate-200/80 bg-white">
             <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="flex items-center gap-3">
                     <img src="https://raw.githubusercontent.com/Gestivon-Software-Solutions/gestivon-landing/refs/heads/main/logo.png"
-                        alt="Gestivon Logo" class="h-6 w-auto">
-                    <span class="text-lg font-bold text-slate-100">Gestivon</span>
+                        alt="Gestivon Logo" class="h-6 w-auto rounded-lg ring-1 ring-slate-900/10">
+                    <span class="text-lg font-bold text-slate-950">Gestivon</span>
                 </div>
-                <div class="flex gap-8 text-sm text-slate-500">
-                    <a class="hover:text-primary transition-colors" href="https://punctual.pt/privacy"
-                        target="_blank">Privacy Policy</a>
-                    <a class="hover:text-primary transition-colors" href="https://punctual.pt/terms"
-                        target="_blank">Terms of Service</a>
-                    <a class="hover:text-primary transition-colors" href="#">Architecture Registry</a>
+                <div class="flex flex-wrap justify-center gap-6 sm:gap-8 text-sm text-slate-500">
+                    <a class="hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-white rounded-sm"
+                        href="https://punctual.pt/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                    <a class="hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-white rounded-sm"
+                        href="https://punctual.pt/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+                    <a class="hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-white rounded-sm"
+                        href="#platform">Punctual Platform</a>
                 </div>
-                <div class="text-sm text-slate-500">
+                <div class="text-sm text-slate-500 text-center md:text-right">
                     © 2026 Gestivon Software Solutions. All rights reserved.
                 </div>
             </div>
         </footer>
     </div>
     <script>
-        document.getElementById('contact-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            if (!this.checkValidity()) {
-                this.reportValidity();
-                return;
-            }
-
+        (function () {
+            const contactForm = document.getElementById('contact-form');
             const formContainer = document.getElementById('form-container');
             const successMessage = document.getElementById('success-message');
-            const submitBtn = this.querySelector('button');
-            const originalBtnText = submitBtn.innerText;
+            const formError = document.getElementById('form-error');
+            const resetFormBtn = document.getElementById('reset-form-btn');
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-            // Visual feedback during submission
-            submitBtn.disabled = true;
-            submitBtn.innerText = 'SENDING...';
+            function showError(message) {
+                formError.textContent = message;
+                formError.classList.remove('hidden');
+            }
 
-            fetch('https://formspree.io/f/solutions@punctual.pt', {
-                method: 'POST',
-                body: new FormData(this),
-                headers: {
-                    'Accept': 'application/json'
+            function hideError() {
+                formError.textContent = '';
+                formError.classList.add('hidden');
+            }
+
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                hideError();
+
+                if (!this.checkValidity()) {
+                    this.reportValidity();
+                    return;
                 }
-            }).then(response => {
-                if (response.ok) {
-                    // Simple transition effect
-                    formContainer.style.opacity = '0';
-                    setTimeout(() => {
-                        formContainer.classList.add('hidden');
-                        successMessage.classList.remove('hidden');
-                        successMessage.classList.add('flex');
-                        // Trigger a small entrance animation
-                        successMessage.style.opacity = '0';
-                        successMessage.style.transform = 'translateY(20px)';
-                        setTimeout(() => {
-                            successMessage.style.transition = 'all 0.5s ease-out';
-                            successMessage.style.opacity = '1';
-                            successMessage.style.transform = 'translateY(0)';
-                        }, 50);
-                    }, 300);
-                } else {
-                    alert('Submission failed. Please try again or contact us directly at solutions@punctual.pt');
+
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.innerText;
+
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'SENDING...';
+
+                fetch('https://formspree.io/f/partners@gestivon.com', {
+                    method: 'POST',
+                    body: new FormData(this),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        if (prefersReducedMotion) {
+                            formContainer.classList.add('hidden');
+                            successMessage.classList.remove('hidden');
+                            successMessage.classList.add('flex');
+                        } else {
+                            formContainer.style.opacity = '0';
+                            setTimeout(() => {
+                                formContainer.classList.add('hidden');
+                                successMessage.classList.remove('hidden');
+                                successMessage.classList.add('flex');
+                                successMessage.style.opacity = '0';
+                                successMessage.style.transform = 'translateY(16px)';
+                                setTimeout(() => {
+                                    successMessage.style.transition = 'all 0.4s ease-out';
+                                    successMessage.style.opacity = '1';
+                                    successMessage.style.transform = 'translateY(0)';
+                                }, 50);
+                            }, 250);
+                        }
+                        contactForm.reset();
+                    } else {
+                        showError('Submission failed. Please try again or contact us directly at partners@gestivon.com.');
+                    }
                     submitBtn.disabled = false;
                     submitBtn.innerText = originalBtnText;
-                }
-            }).catch(error => {
-                alert('An error occurred. Please try again later.');
-                submitBtn.disabled = false;
-                submitBtn.innerText = originalBtnText;
+                }).catch(() => {
+                    showError('A network error occurred. Please try again later or email partners@gestivon.com.');
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = originalBtnText;
+                });
             });
-        });
+
+            resetFormBtn.addEventListener('click', function () {
+                hideError();
+                successMessage.classList.add('hidden');
+                successMessage.classList.remove('flex');
+                successMessage.style.opacity = '';
+                successMessage.style.transform = '';
+                formContainer.classList.remove('hidden');
+                formContainer.style.opacity = '';
+            });
+        })();
     </script>
 </body>
 
